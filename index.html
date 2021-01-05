@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="author" content="Cicero Carvalho"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="jw.css"/>
-		<title>ESTUDO</title>
+		<title>Leitura da Bíblia</title>
 	</head>
 	<body>
 		<header class="cabeçalho">
@@ -12,10 +13,16 @@
 		<h1>PROGRAMAÇÃO DE LEITURA DA BÍBLIA DA ASSOCIAÇÃO</h1>
 		
 		</header>
+		<script>	
 		
-		
-		
-		<script>
+		function Mudarestado(el) {
+        var display = document.getElementById(el).style.display;
+        if(display == "none")
+            document.getElementById(el).style.display = 'block';
+        else
+            document.getElementById(el).style.display = 'none';
+    }
+	
 	var data = new Date();
 	var dia  = data.getDate();
 	var mes  = data.getMonth();
@@ -393,12 +400,12 @@
 		<div>
 			<table class="meses">
 				<tr>
-					<td><a href="#janeiro">Janeiro</a></td>
-					<td><a href="#fevereiro">Fevereiro</a></td>
-					<td><a href="#marco">Março</a></td>
+					<td><a href="#janeiro" onclick="Mudarestado('janeiro')">Janeiro</a></td>
+					<td><a href="#fevereiro" onclick="Mudarestado('fevereiro')">Fevereiro</a></td>
+					<td><a href="#marco" onclick="Mudarestado('marco')">Março</a></td>
 				</tr>
 				<tr>
-					<td><a href="#abril">Abril</a></td>
+					<td><a href="#abril" onclick="Mudarestado('abril')">Abril</a></td>
 					<td>Maio</td>
 					<td>Junho</td>
 				</tr>
@@ -407,6 +414,7 @@
 					<td>Agosto</td>
 					<td>Setembro</td>
 				</tr>
+				
 				<tr>
 					<td>Outubro</td>
 					<td>Novembro</td>
