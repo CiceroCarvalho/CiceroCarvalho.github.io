@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="jwnwt.css"/>
     
-    <title>Leitura da Bíblia</title>
+    <title>LEITURA DA BÍBLIA</title>
 </head>
 <body>
     <header>
-        <a href="#" class="abrir" onclick="abrirmenu()">&#9776;</a><font size="5" color="white"><b>&nbsp;&nbsp;&nbsp;&nbsp;LEITURA DA BÍBLIA</b></font>
+        <a href="#" class="abrir" onclick="abrir()">&#9776;</a><font size="5" color="white"><b>&nbsp;&nbsp;&nbsp;&nbsp;LEITURA DA BÍBLIA</b></font>
     </header>
     <nav id="menu">
-        <a href="#" onclick="esconder()">&times; Início</a>
+        <a href="index.html" onclick="esconder()">&times; Início</a>
         <a href="janeiro.html">Janeiro</a>
         <a href="fevereiro.html">Fevereiro</a>
         <a href="marco.html">Março</a>
@@ -26,13 +26,27 @@
         <a href="novembro.html">Novembro</a>
         <a href="dezembro.html">Dezembro</a>
     </nav>
+    <script>
+
+        function abrir()
+        {
+        document.getElementById("menu").style.width = "250px";
+        document.getElementById("conteudo").style.display = "none"
+        }
+
+        function esconder()
+        {
+        document.getElementById("menu").style.width = "0px";
+        document.getElementById("conteudo").style.display = "block"
+        }
+        
+    </script>
     <main id="conteudo">
-        <h1 align="center"><font color="darkblue">LEITURA DO DIA</font></h1>
-        <script type="text/javascript" src="jwnwt .js"></script>
+        <h1 align="center"><font color="darkblue">FEVEREIRO</font></h1>
     </main>
     <footer>
         &nbsp;&copy;<b>Copyright - Todos os direitos reservados à &nbsp;Cicero Carvalho</b>
     </footer>
+    
 </body>
 </html>
-
