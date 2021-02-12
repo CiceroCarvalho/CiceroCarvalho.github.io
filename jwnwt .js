@@ -7,23 +7,23 @@
 
 	if(hora < 5)
 	{
-		document.write("<p><b>&nbsp;&nbsp;Boa Noite, Seja Bem Vindo!</b></p>" + "<p><b>&nbsp;&nbsp;Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
+		document.write("<p><b>&nbsp;&nbsp;Boa Noite, Seja Bem Vindo!</b></p>" + "<p>&nbsp;&nbsp;<b>Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
 	}
 	else if(hora < 8)
 	{
-		document.write("<p><b>&nbsp;&nbsp;Bom Dia, Seja Bem Vindo!</b></p>" + "<p><b>&nbsp;&nbsp;Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
+		document.write("<p><b>&nbsp;&nbsp;Bom Dia, Seja Bem Vindo!</b></p>" + "<p>&nbsp;&nbsp;<b>Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
 	}
 	else if(hora < 12)
 	{
-		document.write("<p><b>&nbsp;&nbsp;Bom Dia, Seja Bem Vindo!</b></p>" + "<p><b>&nbsp;&nbsp;Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
+		document.write("<p><b>&nbsp;&nbsp;Bom Dia, Seja Bem Vindo!</b></p>" + "<p>&nbsp;&nbsp;<b>Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
 	}
 	else if(hora < 18)
 	{
-		document.write("<p><b>&nbsp;&nbsp;Boa Tarde, Seja Bem Vindo!</b></p>" + "<p>&nbsp;&nbsp;<b>&nbsp;&nbspSua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
+		document.write("<p><b>&nbsp;&nbsp;Boa Tarde, Seja Bem Vindo!</b></p>" + "<p>&nbsp;&nbsp;<b>Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
 	}
 	else
 	{
-		document.write("<p><b>&nbsp;&nbsp;Boa Noite, Seja Bem Vindo!</b></p>" + "<p><b>&nbsp;&nbsp;Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
+		document.write("<p><b>&nbsp;&nbsp;Boa Noite, Seja Bem Vindo!</b></p>" + "<p>&nbsp;&nbsp;<b>Sua leitura programada para hoje &nbsp;&nbspesta pronta.</b></p>")
 	}
 
 
@@ -32,7 +32,7 @@
 
 	var str_data = dia + '/' + (mes+1) + '/' + ano;
 
-	document.write("<h2><br/>&nbsp;&nbsp;Hoje é " + dayName[dias] + ", " + dia + " de " + "&nbsp;&nbsp;" + monName[mes] + " de " + ano + ". </h2>")
+	document.write("<h2>&nbsp;&nbsp;Hoje é " + dayName[dias] + ", " + dia + " de " + "&nbsp;&nbsp;" + monName[mes] + " de " + ano + ". </h2>")
 
 	if(str_data == "1/1/2021"){document.write("<h2>"+"Leia: "+" Gên 1-3"+"</h2>")}
 	if(str_data == "2/1/2021"){document.write("<h2>"+"Leia: "+" Gên 4-7"+"</h2>")}
