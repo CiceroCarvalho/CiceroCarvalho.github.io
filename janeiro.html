@@ -33,11 +33,22 @@
             color:darkred
         }
 
-        footer
-        {
-            position: relative;
-        }
     </style>
+    <script language="JavaScript">
+
+        function abrir()
+        {
+        document.getElementById("menu").style.width = "250px";
+        document.getElementById("conteudo").style.display = "none"
+        }
+
+        function esconder()
+        {
+        document.getElementById("menu").style.width = "0px";
+        document.getElementById("conteudo").style.display = "block"
+        }
+
+    </script>
 </head>
 <body>
     <header>
@@ -58,24 +69,10 @@
         <a href="novembro.html">Novembro</a>
         <a href="dezembro.html">Dezembro</a>
     </nav>
-    <script>
-
-        function abrir()
-        {
-        document.getElementById("menu").style.width = "250px";
-        document.getElementById("conteudo").style.display = "none"
-        }
-
-        function esconder()
-        {
-        document.getElementById("menu").style.width = "0px";
-        document.getElementById("conteudo").style.display = "block"
-        }
-
-    </script>
+   
     <main id="conteudo">
         <h1 align="center"><font color="darkblue">JANEIRO</font></h1>
-        <p><b>&nbsp;&nbsp;No mês de Janeiro você terá que &nbsp;&nbsp;ler:</b></p>
+        <p><b>No mês de Janeiro você terá que ler:</b></p>
         <table>
             <tr id="fundo">
                 <td>Dia 1</td>
@@ -155,7 +152,7 @@
             </tr>
             <tr>
                 <td>Dia 20</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02008000-02008999&pub=nwt"></a>Êxodo 8-10</td>
+                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02008000-02008999&pub=nwt">Êxodo 8-10</a></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 21</td>
@@ -204,8 +201,7 @@
         </table>
     </main>
     <footer>
-        &nbsp;&copy;<b>Copyright - Todos os direitos reservados à &nbsp;Cicero Carvalho</b>
+        &nbsp;&copy;<b>Copyright - Todos os direitos reservados à Cicero Carvalho</b>
     </footer>
-    
 </body>
 </html>
