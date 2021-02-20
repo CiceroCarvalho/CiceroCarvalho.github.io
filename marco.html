@@ -14,7 +14,7 @@
 
         td
         {
-            padding: 25px;
+            padding: 20px;
         }
 
         #fundo
@@ -22,16 +22,6 @@
             background-color: gainsboro;
         }
         
-        a
-        {
-            color: darkblue;
-        }
-
-        a:hover
-        {
-            color:darkred
-        }
-
         footer
         {
             position: relative;
@@ -56,6 +46,27 @@
         document.getElementById("menu").style.width = "0px";
         document.getElementById("conteudo").style.display = "block"
         }
+
+        document.addEventListener("DOMContentLoaded", function(){
+        
+        var checkbox = document.querySelectorAll("input[type='checkbox']");
+     
+        for(var item of checkbox){
+           item.addEventListener("click", function(){
+              localStorage.s_item ? // verifico se existe localStorage
+                 localStorage.s_item = localStorage.s_item.indexOf(this.id+",") == -1 // verifico de localStorage contém o id
+                 ? localStorage.s_item+this.id+"," // não existe. Adiciono a id no loaclStorage
+                 : localStorage.s_item.replace(this.id+",","") : // já existe, apago do localStorage
+              localStorage.s_item = this.id+",";  // não existe. Crio com o id do checkbox
+           });
+        }
+     
+        if(localStorage.s_item){ // verifico se existe localStorage
+           for(var item of checkbox){ // existe, percorro as checkbox
+              item.checked = localStorage.s_item.indexOf(item.id+",") != -1 ? true : false; // marco true nas ids que existem no localStorage
+           }
+        }
+     });
         
     </script>
     
@@ -87,127 +98,127 @@
         <table>
             <tr id="fundo">
                 <td>Dia 1</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01001000-01001999&pub=nwt">Gênesis 1-3</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=05017001-05019021">Deute 17-19 </a><input type="checkbox" id="60"></td>
             </tr>
             <tr>
                 <td>Dia 2</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01004000-01004999&pub=nwt">Gênesis 4-7</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=05020001-05022030">Deute 20-22 </a><input type="checkbox" id="61"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 3</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01008000-01008999&pub=nwt">Gênesis 8-11</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=05023001-05026019">Deute 23-26 </a><input type="checkbox" id="62"></td>
             </tr>
             <tr>
                 <td>Dia 4</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01012000-01012999&pub=nwt">Gênesis 12-15</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=05027001-05028068">Deute 27-28 </a><input type="checkbox" id="63"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 5</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01016000-01016999&pub=nwt">Gênesis 16-18</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=05029001-05031030">Deute 29-31 </a><input type="checkbox" id="64"></td>
             </tr>
             <tr>
                 <td>Dia 6</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01019000-01019999&pub=nwt">Gênesis 19-22</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=05032001-05032052">Deute 32 </a><input type="checkbox" id="65"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 7</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01023000-01023999&pub=nwt">Gênesis 23-24</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=05033001-05034012">Deute 33-34 </a><input type="checkbox" id="66"></td>
             </tr>
             <tr>
                 <td>Dia 8</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01025000-01025999&pub=nwt">Gênesis 25-27</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06001001-06004024">Josué 1-4 </a><input type="checkbox" id="67"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 9</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01028000-01028999&pub=nwt">Gênesis 28-30</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06005001-06007026">Josué 5-7 </a><input type="checkbox" id="68"></td>
             </tr>
             <tr>
                 <td>Dia 10</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01031000-01031999&pub=nwt">Gênesis 31-32</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06008001-06009027">Josué 8-9 </a><input type="checkbox" id="69"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 11</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01033000-01033999&pub=nwt">Gênesis 33-34</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06010001-06012024">Josué 10-12 </a><input type="checkbox" id="70"></td>
             </tr>
             <tr>
                 <td>Dia 12</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01035000-01035999&pub=nwt">Gênesis 35-37</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06013001-06015063">Josué 13-15 </a><input type="checkbox" id="71"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 13</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01038000-01038999&pub=nwt">Gênesis 38-40</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06016001-06018028">Josué 16-18 </a><input type="checkbox" id="72"></td>
             </tr>
             <tr>
                 <td>Dia 14</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01041000-01041999&pub=nwt">Gênesis 41-42</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06019001-06021045">Josué 19-21 </a><input type="checkbox" id="73"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 15</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01043000-01043999&pub=nwt">Gênesis 43-45</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=06022001-06024033">Josué 22-24 </a><input type="checkbox" id="74"></td>
             </tr>
             <tr>
                 <td>Dia 16</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01046000-01046999&pub=nwt">Gênesis 46-48</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07001001-07002023">Juízes 1-2 </a><input type="checkbox" id="75"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 17</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=01049000-01049999&pub=nwt">Gênesis 49-50</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07003001-07005031">Juízes 3-5 </a><input type="checkbox" id="76"></td>
             </tr>
             <tr>
                 <td>Dia 18</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02001000-02001999&pub=nwt">Êxodo 1-4</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07006001-07007025">Juízes 6-7 </a><input type="checkbox" id="77"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 19</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02005000-02005999&pub=nwt">Êxodo 5-7</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07008001-07009057">Juízes 8-9 </a><input type="checkbox" id="78"></td>
             </tr>
             <tr>
                 <td>Dia 20</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02008000-02008999&pub=nwt">Êxodo 8-10</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07010001-07011040">Juízes 10-11 </a><input type="checkbox" id="79"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 21</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02011000-02011999&pub=nwt">Êxodo 11-13</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07012001-07013025">Juízes 12-13 </a><input type="checkbox" id="80"></td>
             </tr>
             <tr>
                 <td>Dia 22</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02014000-02014999&pub=nwt">Êxodo 14-15</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07014001-07016031">Juízes 14-16 </a><input type="checkbox" id="81"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 23</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02016000-02016999&pub=nwt">Êxodo 16-18</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07017001-07019030">Juízes 17-19 </a><input type="checkbox" id="82"></td>
             </tr>
             <tr>
                 <td>Dia 24</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02019000-02019999&pub=nwt">Êxodo 19-21</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=07020001-07021025">Juízes 20-21 </a><input type="checkbox" id="83"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 25</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02022000-02022999&pub=nwt">Êxodo 22-25</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=08001001-08004022">Rute 1-4 </a><input type="checkbox" id="84"></td>
             </tr>
             <tr>
                 <td>Dia 26</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02026000-02026999&pub=nwt">Êxodo 26-28</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=09001001-09002036">1Samuel 1-2 </a><input type="checkbox" id="85"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 27</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02029000-02029999&pub=nwt">Êxodo 29-30</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=09003001-09006021">1Samuel 3-6 </a><input type="checkbox" id="86"></td>
             </tr>
             <tr>
                 <td>Dia 28</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02031000-02031999&pub=nwt">Êxodo 31-33</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=09007001-09009027">1Samuel 7-9 </a><input type="checkbox" id="87"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 29</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02034000-02034999&pub=nwt">Êxodo 34-35</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=09010001-09012025">1Samuel 10-12 </a><input type="checkbox" id="88"></td>
             </tr>
             <tr>
                 <td>Dia 30</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02036000-02036999&pub=nwt">Êxodo 36-38</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=09013001-09014052">1Samuel 13-14 </a><input type="checkbox" id="89"></td>
             </tr>
             <tr id="fundo">
                 <td>Dia 31</td>
-                <td><a href="https://www.jw.org/finder?srcid=jwlshare&wtlocale=T&prefer=lang&bible=02039000-02039999&pub=nwt">Êxodo 39-40</a></td>
+                <td align="left"><a href="https://www.jw.org/finder?wtlocale=T&bible=09015001-09016023">1Samuel 15-16 </a><input type="checkbox" id="90"></td>
             </tr>
         </table>
     </main>

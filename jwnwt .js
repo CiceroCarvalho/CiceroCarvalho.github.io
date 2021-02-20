@@ -84,8 +84,8 @@
 	if(str_data == "17/2/2021"){document.write("<h2>"+"Leia: "+" Núm 19-21"+"</h2>")}
 	if(str_data == "18/2/2021"){document.write("<h2>"+"Leia: "+" Núm 22-24"+"</h2>")}
 	if(str_data == "19/2/2021"){document.write("<h2>"+"Leia: "+" Núm 25-27"+"</h2>")}
-	if(str_data == "20/2/2021"){document.write("<h2>"+"Leia: "+" Núm 28-30"+"</h2>")}
-	if(str_data == "21/2/2021"){document.write("<h2>"+"Leia: "+" Núm 31-32"+"</h2>")}
+	if(str_data == "20/2/2021"){document.write("<h2>"+"Leia: "+"<a href='https://www.jw.org/finder?wtlocale=T&bible=04028001-04030016'> Núm 28-30 </a>"+"</h2>")}
+	if(str_data == "21/2/2021"){document.write("<h2>"+"Leia: "+"<a href='https://www.jw.org/finder?wtlocale=T&bible=04031001-04032042'> Núm 31-32 </a>"+"</h2>")}
 	if(str_data == "22/2/2021"){document.write("<h2>"+"Leia: "+" Núm 33-36"+"</h2>")}
 	if(str_data == "23/2/2021"){document.write("<h2>"+"Leia: "+" De 1-2"+"</h2>")}
 	if(str_data == "24/2/2021"){document.write("<h2>"+"Leia: "+" De 3-4"+"</h2>")}
